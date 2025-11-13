@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "itzclient",
+  "version": "1.21.1",
+  "name": "ItzClient",
+  "description": "ItzClient v1.21.1 - liquid-glass theme, 15 HUDs, settings GUI",
+  "authors": [
+    "itzmojahide"
+  ],
+  "contact": {
+    "sources": "https://github.com/itzmojahide2/ItzClient-2.0",
+    "discord": "https://discord.gg/P6PT6fERjT"
+  },
+  "license": "CC-BY-4.0",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.itzmojahide.itzclient.ItzClientKt"
+    ]
+  },
+  "mixins": [
+    "itzclient.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.1"
+  },
+  "icon": "assets/itzclient/textures/gui/logo.png"
+}
