@@ -6,10 +6,12 @@ import net.minecraft.client.MinecraftClient
 import net.minecraft.client.util.math.MatrixStack
 import net.minecraft.client.gui.DrawableHelper
 
-class ArmorHud : IHudModule {
+class WatermarkHud : IHudModule {
     private val mc = MinecraftClient.getInstance()
     override fun render(matrices: MatrixStack, tickDelta: Float) {
-        DrawableHelper.fill(matrices, 6, 46, 150, 66, 0x22000000)
-        mc.textRenderer.draw(matrices, "Armor: placeholder", 10f, 48f, net.itzmojahide.itzclient.ui.UIThemeManager.accentColor)
+        val w = mc.window.scaledWidth
+        val h = mc.window.scaledHeight
+        DrawableHelper.fill(matrices, w-220, h-30, w-8, h-8, 0x33FFFFFF)
+        mc.textRenderer.draw(matrices, "ItzClient v1.21.1 | itzmojahide", w-210f, h-24f, net.itzmojahide.itzclient.ui.UIThemeManager.accentColor)
     }
 }
